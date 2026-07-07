@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Credit Society</title>
+  ><style>
+    /* General Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #ffe5d9);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #b30000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid gold;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+  letter-spacing: 2px;
+}
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: #ffd700;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+/* Container */
+.container {
+  width: 80%;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Form */
+form {
+  display: grid;
+  grid-gap: 15px;
+  margin-bottom: 30px;
+}
+label {
+  font-weight: bold;
+  color: #444;
+}
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button[type="submit"] {
+  background: #b30000;
+  color: #fff;
+}
+button[type="submit"]:hover {
+  background: #800000;
+}
+button[type="button"] {
+  background: #ccc;
+  color: #333;
+}
+button[type="button"]:hover {
+  background: #999;
+}
+
+/* Info Section */
+.info {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+.info h2 {
+  color: #b30000;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+/* Map Section */
+.map {
+  margin-top: 20px;
+  text-align: center;
+}
+.map h2 {
+  color: #b30000;
+  margin-bottom: 10px;
+}
+iframe {
+  border: none;
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Trimurti Co-Op. Credit Society Ltd.</h1>
+    <h2>Contact Us</h2>
+    <nav>
+      <a href="index.html">Home</a> | 
+      <a href="about.html">About Us</a> | 
+      <a href="services.html">Services</a> | 
+      <a href="membership.html">Membership</a> | 
+      <a href="contact.html">Contact</a> | 
+      <a href="deposits.html">Deposits</a> |
+      <a href="loan.html">Loans</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <form id="contactForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+      <button type="button" onclick="window.history.back()">Cancel</button>
+    </form>
+
+    <div class="info">
+      <h2>Our Contact Details</h2>
+      <p><strong>Address:</strong> Credit Society Office, Girgaon, Mumbai, Maharashtra, India</p>
+      <p><strong>Phone:</strong> 022 4015 2065</p>
+      <p><strong>Email:</strong> trimurtisociety@gmail.com</p>
+      <p><strong>WhatsApp:</strong> +91 8291137876</p>
+    </div>
+
+    <div class="map">
+      <h2>Find Us Here</h2>
+      <!-- Replace with your actual Google Maps embed link -->
+      <iframe src="https://maps.google.com/maps?q=Girgaon,Maharashtra,India&output=embed"></iframe>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event){
+      event.preventDefault();
+      alert("🎉 Thank you for contacting us! We will get back to you soon.");
+    });
+  </script>
+</body>
+</html>

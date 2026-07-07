@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <title>Membership - Trimurti Credit Society</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f9f9f9, #ffe5d9);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #b30000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 5px solid gold;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      letter-spacing: 2px;
+    }
+    nav {
+  margin-top: 10px;
+}
+nav a {
+  color: #ffd700;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+    section {
+      background: #fff;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 80%;
+    }
+    h2 {
+      color: #b30000;
+      border-bottom: 2px solid #ffd700;
+      padding-bottom: 8px;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+      color: #333;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button[type="submit"] {
+      background: #b30000;
+      color: #fff;
+    }
+    button[type="submit"]:hover {
+      background: #800000;
+    }
+    button[type="reset"] {
+      background: #ccc;
+      color: #333;
+    }
+    #paymentSection {
+      text-align: center;
+    }
+    .pay-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      background: #ffd700;
+      color: #000;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .pay-btn:hover {
+      background: #ffae00;
+      transform: scale(1.05);
+    }
+    .welcome-banner {
+      background: #ffe5b4;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 1.2em;
+      color: #b30000;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>त्रिमूर्ती सहकारी पतपेढी मर्यादित</h1>
+    <p>नोंदणी क्र.: BOM/RSR/GN Ward/1353/1982</p>
+    <p>फोन: 40163135 / 8291137876 | Email: trimurtisociety@gmail.com</p>
+    <nav>
+      <a href="index.html">Home</a> | 
+      <a href="about.html">About Us</a> | 
+      <a href="services.html">Services</a> | 
+      <a href="membership.html">Membership</a> | 
+      <a href="contact.html">Contact</a> | 
+      <a href="deposits.html">Deposits</a> |
+      <a href="loan.html">Loans</a>
+    </nav>
+  </header>
+
+  <!-- Membership Form -->
+  <section>
+    <h2>सभासद अर्ज</h2>
+    <form id="membershipForm">
+      <label>सभासदाचे नांव:</label>
+      <input type="text" name="memberName" required>
+
+      <label>वय:</label>
+      <input type="number" name="age" required>
+
+      <label>पत्ता:</label>
+      <textarea name="address" required></textarea>
+
+      <label>PAN नं:</label>
+      <input type="text" name="pan">
+
+      <label>आधार नं:</label>
+      <input type="text" name="aadhaar">
+
+      <label>फोन नं:</label>
+      <input type="tel" name="phone">
+
+      <label>व्यवसाय:</label>
+      <input type="text" name="occupation">
+
+      <label>वारसाचे नांव:</label>
+      <input type="text" name="nomineeName">
+
+      <label>वारसाचे नाते:</label>
+      <input type="text" name="nomineeRelation">
+
+      <h3>खात्यासंबंधी विशेष सूचना:</h3>
+      <textarea name="instructions"></textarea>
+
+      <button type="submit">Submit Membership</button>
+      <button type="button" onclick="goHome()">Cancel</button>
+
+      <script>
+  function goHome() {
+    // Redirect to your home page
+    window.location.href = "index.html"; 
+    // 👆 Replace "index.html" with the actual filename of your homepage
+  }
+
+  document.getElementById("membershipForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("paymentSection").style.display = "block";
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  });
+      </script>
+    </form>
+  </section>
+
+  <!-- Payment Options -->
+  <section id="paymentSection" style="display:none;">
+    <div class="welcome-banner">🎉 Welcome to Patpedhi! आपले सदस्यत्व अर्ज सादर झाले!</div>
+    <h2>पेमेंट पर्याय निवडा</h2>
+    <div>
+      <div class="pay-btn">📱 QR Code</div>
+      <div class="pay-btn">🏦 NEFT</div>
+      <div class="pay-btn">💳 RTGS</div>
+      <div class="pay-btn">📲 Mobile Banking</div>
+    </div>
+  </section>
+</body>
+</html>

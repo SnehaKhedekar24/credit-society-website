@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services - My Credit Society Project</title>
+  <style>
+    /* General Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #ffe5d9);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #b30000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid gold;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+  letter-spacing: 2px;
+}
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: #ffd700;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  background: #fff;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 80%;
+}
+section h2 {
+  color: #b30000;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.service-card {
+  background: #fff8e1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.service-card h3 {
+  margin-top: 0;
+  color: #b30000;
+}
+
+/* Calculator Cards */
+.calculator-card {
+  background: #ffe5b4;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 350px;          /* Compact width */
+  margin-left: 40px;     /* Pushes card to the left margin */
+}
+
+.calculator-card input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.calculator-card button {
+  background: #b30000;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.calculator-card button:hover {
+  background: #800000;
+}
+
+.calculator-card p {
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Interest Info Section */
+.interest-info, .reducing-balance {
+  background: #fff;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 80%;
+}
+.interest-info h2, .reducing-balance h2 {
+  color: #b30000;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+.reducing-balance ul {
+  list-style: none;
+  padding: 0;
+}
+.reducing-balance li {
+  background: #ffe5b4;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.reducing-balance li:hover {
+  background: #ffd27f;
+}
+
+
+
+/* Footer */
+footer {
+  background: #b30000;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  border-top: 5px solid gold;
+}
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+  </style> 
+</head>
+<body>
+  <header>
+  <h1>Our Services</h1>
+  <nav>
+    <a href="index.html">Home</a> | 
+    <a href="about.html">About Us</a> | 
+    <a href="services.html">Services</a> | 
+    <a href="membership.html">Membership</a> | 
+    <a href="contact.html">Contact</a> | 
+    <a href="deposits.html">Deposits</a> |
+    <a href="loan.html">Loans</a>
+  </nav>
+</header>
+
+
+  <section>
+    <h2>What We Offer</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>📱 QR Code Transactions</h3>
+        <p>Fast and secure payments using QR codes for hassle-free transactions.</p>
+      </div>
+      <div class="service-card">
+        <h3>💬 WhatsApp Communication</h3>
+        <p>Stay connected with instant updates and support through WhatsApp.</p>
+      </div>
+      <div class="service-card">
+        <h3>💰 Loans</h3>
+        <p>Affordable loan facilities designed to meet your financial needs.</p>
+      </div>
+      <div class="service-card">
+        <h3>🔔 WhatsApp Reminders</h3>
+        <p>Get timely reminders for payments, meetings, and updates directly on WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="interest-info">
+  <h2>Understanding Interest</h2>
+  <p>
+    Interest is the cost of borrowing money or the return earned on deposits. 
+    It is calculated based on the principal amount, rate of interest, and time period. 
+    Our society offers attractive interest rates on deposits and affordable rates on loans.
+  </p>
+</section>
+
+<section>
+    <h2>Loan EMI Calculator</h2>
+    <div class="calculator-card">
+      <input type="number" id="loanAmount" placeholder="Loan Amount">
+      <input type="number" id="interestRate" placeholder="Interest Rate (%)">
+      <input type="number" id="loanTenure" placeholder="Tenure (Years)">
+      <button onclick="calculateEMI()">Calculate EMI</button>
+      <p id="emiResult"></p>
+    </div>
+  </section>
+
+<section class="reducing-balance">
+  <h2>Reducing Balance Interest</h2>
+  <p>
+    In the reducing balance method, interest is charged only on the outstanding loan balance. 
+    As you repay your loan in installments, the principal reduces, and so does the interest charged. 
+    This means your interest burden decreases over time, making it a fair and transparent way of calculating loan repayments.
+  </p>
+  <ul>
+    <li>✅ Interest is calculated on remaining balance, not the original loan amount</li>
+    <li>✅ Each EMI reduces both principal and interest</li>
+    <li>✅ More cost-effective compared to flat interest method</li>
+  </ul>
+  </section>
+
+  <section>
+  <h2>Reducing Balance Interest Calculator</h2>
+  <div class="calculator-card">
+    <input type="number" id="rbPrincipal" placeholder="Principal Amount">
+    <input type="number" id="rbRate" placeholder="Interest Rate (%)">
+    <input type="number" id="rbDays" placeholder="Tenure (Days)">
+    <button onclick="calculateRBInterest()">Calculate Interest</button>
+    <p id="rbResult"></p>
+  </div>
+</section>
+
+  <section>
+    <h2>Deposit Interest Calculator</h2>
+    <div class="calculator-card">
+      <input type="number" id="principalAmount" placeholder="Principal Amount">
+      <input type="number" id="interestRateDeposit" placeholder="Interest Rate (%)">
+      <input type="number" id="timePeriod" placeholder="Time (Years)">
+      <button onclick="calculateInterest()">Calculate Interest</button>
+      <p id="interestResult"></p>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>© Trimurti Co-Op. Credit Society Ltd.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
